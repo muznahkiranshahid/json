@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img id="productImage" class="img-fluid" alt="Product Image">
+      </div>
+      <div class="col-md-6">
+        <h1 class="h1 text-success" id="productName"></h1>
+        <p class="fs-4" id="productPrice"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+         let products = [
+            { name: "John Doe", image: "john_doe.png", category: "Good Students", age: "20" },
+            { name: "Jane Smith", image: "jane_smith.png", category: "Average Students", age: "21" },
+            { name: "Emily Johnson", image: "emily_johnson.png", category: "Good Students", age: "22" },
+            { name: "Michael Brown", image: "michael_brown.png", category: "Average Students", age: "23" },
+            { name: "Sarah Williams", image: "sarah_williams.png", category: "Good Students", age: "24" },
+            { name: "David Lee", image: "david_lee.png", category: "Average Students", age: "25" },
+            { name: "Chris Harris", image: "chris_harris.png", category: "Good Students", age: "26" },
+            { name: "Olivia Clark", image: "olivia_clark.png", category: "Absenties", age: "27" },
+            { name: "Liam Walker", image: "liam_walker.png", category: "Absenties", age: "28" },
+            { name: "Sophia Adams", image: "sophia_adams.png", category: "Good Students", age: "29" },
+            { name: "James Taylor", image: "james_taylor.png", category: "Absenties", age: "30" },
+            { name: "Ava Martinez", image: "ava_martinez.png", category: "Average Students", age: "31" },
+            { name: "Benjamin Garcia", image: "benjamin_garcia.png", category: "Absenties", age: "32" },
+            { name: "Charlotte Wilson", image: "charlotte_wilson.png", category: "Good Students", age: "33" },
+            { name: "Amelia Robinson", image: "amelia_robinson.png", category: "Absenties", age: "34" },
+            { name: "Isabella Scott", image: "isabella_scott.png", category: "Good Students", age: "35" },
+            { name: "Jack Anderson", image: "jack_anderson.png", category: "Absenties", age: "36" },
+            { name: "Ella Thomas", image: "ella_thomas.png", category: "Good Students", age: "37" },
+            { name: "Lucas Martinez", image: "lucas_martinez.png", category: "Average Students", age: "38" },
+            { name: "Ethan King", image: "ethan_king.png", category: "Absenties", age: "39" },
+            { name: "Madison Wright", image: "madison_wright.png", category: "Average Students", age: "40" },
+            { name: "Mason Rodriguez", image: "mason_rodriguez.png", category: "Average Students", age: "41" },
+            { name: "Harper Harris", image: "harper_harris.png", category: "Absenties", age: "42" },
+            { name: "Grace Evans", image: "grace_evans.png", category: "Average Students", age: "43" },
+            { name: "Zoe Murphy", image: "zoe_murphy.png", category: "Absenties", age: "44" },
+            { name: "Charlotte Perez", image: "charlotte_perez.png", category: "Absenties", age: "45" }
+        ];
+
+    let productImage = document.getElementById("productImage");
+    let productName = document.getElementById("productName");
+    let productPrice = document.getElementById("productAge");
+
+    let queryParams = new URLSearchParams(window.location.search);
+    let paramId = queryParams.get("id");
+
+    if (paramId !== null) {
+      productImage.src = products[paramId].image;
+      productName.textContent = products[paramId].name;
+      productPrice.textContent = products[paramId].pprice;
+    } else {
+      productName.textContent = "Product not found";
+      productPrice.textContent = "";
+    }
+  </script>
+</body>
+</html>
