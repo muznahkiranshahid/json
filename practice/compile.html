@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,8 +12,8 @@
 <body>
     <div class="container">
         <form class="form-inline my-2 m-5">
-            <input class="form-control" width="300px" type="search" placeholder="Search" id="search-input" aria-label="Search">
-            <button class="btn btn-outline-primary m-3" type="submit" id="search-button" onclick="searchCards(event)">Search</button>
+            <input class="form-control" style="width: 300px;" type="search" placeholder="Search" id="search-input" aria-label="Search">
+            <button class="btn btn-outline-primary m-3" type="button" id="search-button" onclick="searchCards(event)">Search</button>
         </form>
         <div class="container my-5">
             <!-- Filter Buttons -->
@@ -30,49 +30,46 @@
     <script>
         let allProducts = document.getElementById("allproducts");
         let products = [
-            { id:1, name: "John Doe", image: "john_doe.png", category: "Good Students", age: "20" },
-            { id:2, name: "Jane Smith", image: "jane_smith.png", category: "Average Students", age: "21" },
-            { id:3, name: "Emily Johnson", image: "emily_johnson.png", category: "Good Students", age: "22" },
-            { id:4, name: "Michael Brown", image: "michael_brown.png", category: "Average Students", age: "23" },
-            { id:5, name: "Sarah Williams", image: "sarah_williams.png", category: "Good Students", age: "24" },
-            { id:6, name: "David Lee", image: "david_lee.png", category: "Average Students", age: "25" },
-            { id:7, name: "Chris Harris", image: "chris_harris.png", category: "Good Students", age: "26" },
-            { id:8, name: "Olivia Clark", image: "olivia_clark.png", category: "Absenties", age: "27" },
-            { id:9, name: "Liam Walker", image: "liam_walker.png", category: "Absenties", age: "28" },
-            { id:10, name: "Sophia Adams", image: "sophia_adams.png", category: "Good Students", age: "29" },
-            { id:11, name: "James Taylor", image: "james_taylor.png", category: "Absenties", age: "30" },
-            { id:12, name: "Ava Martinez", image: "ava_martinez.png", category: "Average Students", age: "31" },
-            { id:13, name: "Benjamin Garcia", image: "benjamin_garcia.png", category: "Absenties", age: "32" },
-            { id:14, name: "Charlotte Wilson", image: "charlotte_wilson.png", category: "Good Students", age: "33" },
-            { id:15, name: "Amelia Robinson", image: "amelia_robinson.png", category: "Absenties", age: "34" },
-            { id:16, name: "Isabella Scott", image: "isabella_scott.png", category: "Good Students", age: "35" },
-            { id:17, name: "Jack Anderson", image: "jack_anderson.png", category: "Absenties", age: "36" },
-            { id:18, name: "Ella Thomas", image: "ella_thomas.png", category: "Good Students", age: "37" },
-            { id:19, name: "Lucas Martinez", image: "lucas_martinez.png", category: "Average Students", age: "38" },
-            { id:20, name: "Ethan King", image: "ethan_king.png", category: "Absenties", age: "39" },
-            { id:21, name: "Madison Wright", image: "madison_wright.png", category: "Average Students", age: "40" },
-            { id:22, name: "Mason Rodriguez", image: "mason_rodriguez.png", category: "Average Students", age: "41" },
-            { id:23, name: "Harper Harris", image: "harper_harris.png", category: "Absenties", age: "42" },
-            { id:24, name: "Grace Evans", image: "grace_evans.png", category: "Average Students", age: "43" },
-            { id:25, name: "Zoe Murphy", image: "zoe_murphy.png", category: "Absenties", age: "44" },
-            { id:26, name: "Charlotte Perez", image: "charlotte_perez.png", category: "Absenties", age: "45" }
+            { name: "John Doe", image: "john_doe.png", category: "Good Students", age: "20" },
+            { name: "Jane Smith", image: "jane_smith.png", category: "Average Students", age: "21" },
+            { name: "Emily Johnson", image: "emily_johnson.png", category: "Good Students", age: "22" },
+            { name: "Michael Brown", image: "michael_brown.png", category: "Average Students", age: "23" },
+            { name: "Sarah Williams", image: "sarah_williams.png", category: "Good Students", age: "24" },
+            { name: "David Lee", image: "david_lee.png", category: "Average Students", age: "25" },
+            { name: "Chris Harris", image: "chris_harris.png", category: "Good Students", age: "26" },
+            { name: "Olivia Clark", image: "olivia_clark.png", category: "Absenties", age: "27" },
+            { name: "Liam Walker", image: "liam_walker.png", category: "Absenties", age: "28" },
+            { name: "Sophia Adams", image: "sophia_adams.png", category: "Good Students", age: "29" },
+            { name: "James Taylor", image: "james_taylor.png", category: "Absenties", age: "30" },
+            { name: "Ava Martinez", image: "ava_martinez.png", category: "Average Students", age: "31" },
+            { name: "Benjamin Garcia", image: "benjamin_garcia.png", category: "Absenties", age: "32" },
+            { name: "Charlotte Wilson", image: "charlotte_wilson.png", category: "Good Students", age: "33" },
+            { name: "Amelia Robinson", image: "amelia_robinson.png", category: "Absenties", age: "34" },
+            { name: "Isabella Scott", image: "isabella_scott.png", category: "Good Students", age: "35" },
+            { name: "Jack Anderson", image: "jack_anderson.png", category: "Absenties", age: "36" },
+            { name: "Ella Thomas", image: "ella_thomas.png", category: "Good Students", age: "37" },
+            { name: "Lucas Martinez", image: "lucas_martinez.png", category: "Average Students", age: "38" },
+            { name: "Ethan King", image: "ethan_king.png", category: "Absenties", age: "39" },
+            { name: "Madison Wright", image: "madison_wright.png", category: "Average Students", age: "40" },
+            { name: "Mason Rodriguez", image: "mason_rodriguez.png", category: "Average Students", age: "41" },
+            { name: "Harper Harris", image: "harper_harris.png", category: "Absenties", age: "42" },
+            { name: "Grace Evans", image: "grace_evans.png", category: "Average Students", age: "43" },
+            { name: "Zoe Murphy", image: "zoe_murphy.png", category: "Absenties", age: "44" },
+            { name: "Charlotte Perez", image: "charlotte_perez.png", category: "Absenties", age: "45" }
         ];
 
-        //  Function to display cards dynamically
+        // Function to display cards dynamically
         function displayCards(cards) {
             allProducts.innerHTML = "";
             cards.forEach(product => {
                 allProducts.innerHTML += `
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="card" style="width: 100%;">
-                            <img src="${product.image}" class="card-img-top" alt="...">
+                            <img src="${product.image}" class="card-img-top" alt="..." onError="this.onerror=null;this.src='fallback.jpg';">
                             <div class="card-body">
                                 <h5 class="card-title">${product.name}</h5>
                                 <p class="card-text">Age: ${product.age}</p>
-                                <button class="btn btn-outline-danger" >
-                                     <a  class="btn " href="./compiledetail.html?id=${1}">SHOW PRODUCT</a>
-                                     
-                                     </button>
+                                <a class="btn btn-outline-danger" href="./compiledetail.html?id=${product.name}">SHOW PRODUCT</a>
                             </div>
                         </div>
                     </div>`;
