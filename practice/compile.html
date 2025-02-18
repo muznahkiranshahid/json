@@ -31,11 +31,10 @@
     <script>
         let allProducts = document.getElementById("allproducts");
         
-
         // Function to display cards dynamically
         function displayCards(cards) {
             allProducts.innerHTML = "";
-            cards.forEach(product => {
+            cards.forEach((product, index) => {
                 allProducts.innerHTML += `
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="card" style="width: 100%;">
@@ -43,7 +42,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">${product.name}</h5>
                                 <p class="card-text">Age: ${product.age}</p>
-                                <a class="btn btn-outline-danger" href="./compiledetail.html?id=${product.name}">SHOW PRODUCT</a>
+                                <a class="btn btn-outline-danger" href="./compiledetail.html?id=${index}">SHOW PRODUCT</a>
                             </div>
                         </div>
                     </div>`;
